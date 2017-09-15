@@ -1,0 +1,14 @@
+{
+  "name": "07-demo-package",
+  "version": "1.0.0",
+  "description": "this is a demo package.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "demopkg"
+  ],
+  "author": "jtt",
+  "license": "ISC"
+}

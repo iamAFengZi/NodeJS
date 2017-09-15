@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test form </title>
+</head>
+<body>
+  <!-- 当表单的 enctype="application/x-www-form-urlencoded" 的时候，post请求报文体中的数据格式就是： username=abcd&password=1234 -->
+
+<script>
+//    当表单需要提交文件的时候需要把 enctype="multipart/form-data"，post 请求报文体中的格式如下：
+
+//   ------WebKitFormBoundaryjfAUlpsSAb70n2Qq
+// Content-Disposition: form-data; name="username"
+
+// abcd
+// ------WebKitFormBoundaryjfAUlpsSAb70n2Qq
+// Content-Disposition: form-data; name="password"
+
+// 1234
+// ------WebKitFormBoundaryjfAUlpsSAb70n2Qq--
+
+
+// body-parser中间件只能处理 enctype="application/x-www-form-urlencoded" 的 post 请求。对于 enctype="multipart/form-data"的 post 请求无法处理。
+</script>
+ 
+ 
+  <form action="http://localhost:9000" method="post" enctype="application/x-www-form-urlencoded">
+    <input type="text" name="username" value="abcd">
+    <input type="text" name="password" value="1234">
+    <input type="submit" value="提交">
+  </form>
+</body>
+</html>
